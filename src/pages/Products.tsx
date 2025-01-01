@@ -22,7 +22,7 @@ const Products = () => {
       .catch(() => {
         setIsLoading(false);
       });
-  }, []);
+  }, []); 
 
   useEffect(() => {
     const lowercasedSearch = searchParams.toLowerCase();
