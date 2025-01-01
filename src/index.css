@@ -1,0 +1,16 @@
+
+.products-page {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+  }
+  
+
+/* Loading message */
+.loading-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    margin: 20px 0;
+  }
