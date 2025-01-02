@@ -45,13 +45,27 @@
   .ingredients {
     display: none; 
     position: absolute;
-    bottom: 10px;
+    bottom: 60px;
     left: 10px;
     background-color: black;
-    padding: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    max-height: 200px; 
+    max-width: calc(100% - 20px);
+    padding: 10px;
   }
-  
+
+  .ingredients ul {
+    list-style: circle;
+    padding-left: inherit;
+    margin: 0;
+  }
+
+  .ingredients li {
+    justify-content: space-between; 
+    margin-bottom: 5px;
+  }
+
   .product-card:hover .ingredients {
     display: block; 
   }
@@ -70,6 +84,24 @@
     background-color: #36917F;
   }
   
+  @media (max-width: 600px) {
+  
+    .ingredients {
+      max-height: 150px; 
+    }
+  
+    .ingredients li {
+      font-size: 12px;
+      display: block;
+      justify-content: space-between; 
+      align-items: center;
+    }
+
+    .ingredients ul {
+      list-style-type: circle;
+      padding-left: inherit; 
+  }
+  }
   
 
 

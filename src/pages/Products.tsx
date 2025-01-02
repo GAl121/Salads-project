@@ -34,14 +34,9 @@ const Products = () => {
       setCurrentPage(1); // Reset to page 1 after a new search
   }, [searchParams, products]);
 
-  const toggleStock = useCallback((productId: number) => {
-    setProducts((prevProducts) =>
-      prevProducts.map((product) =>
-        product.id === productId
-          ? { ...product, in_stock: !product.in_stock }
-          : product
-      )
-    );
+  const toggleStock = useCallback( async (productId: number)  => {
+    const updatedProducts = await DB.toggleProductInStock(productId);
+    setProducts(updatedProducts);
   }, []);
 
   const handlePageChange = (newPage: number) => {

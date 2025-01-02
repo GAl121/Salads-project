@@ -4,7 +4,7 @@ import { Loader } from "../components";
 import Modal from "../components/UI/Modal/Modal";
 import "./TriviaStyle.css";
 
-const Trivia = () => { 
+const Trivia = () => {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -118,7 +118,6 @@ const Trivia = () => {
                     selectedAnswer === option ? "selected" : ""
                   }`}
                   onClick={() => handleAnswerClick(option)}
-                  disabled={selectedAnswer !== null}
                 >
                   {option}
                 </button>
